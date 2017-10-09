@@ -64,6 +64,14 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  if (cart.hasOwnProperty(item) === true) {
+    var removeItem = item
+    delete cart.removeItem
+    return cart
+  } else {
+    console.log(`That item is not in your cart`)
+    return cart
+  }
 }
 
 function placeOrder(cardNumber) {

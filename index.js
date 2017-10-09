@@ -24,7 +24,11 @@ function viewCart() {
   } else {
     var list = `In your cart, you have`
     for(var i =0; i<cart.length; i++) {
-      list = list + ` ${cart[i]} at $${cart[i]}`
+      var x = cart[i]
+      var y = Object.keys(x)
+      var z = Object.values(x)
+      var a = parseFloat(z[0])
+      list = list + ` ${y[0]} at $${a}`
       if (i === cart.length - 2) {
         list = list + ',and'
       } if(i === cart.length - 1) {

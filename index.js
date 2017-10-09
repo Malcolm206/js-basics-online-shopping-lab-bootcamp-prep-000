@@ -29,7 +29,7 @@ function viewCart() {
       var z = x[y[0]]
       list = list + ` ${y[0]} at $${z}`
       if (i === cart.length - 2) {
-        list = list + ',and'
+        list = list + ', and'
       } else if(i === cart.length - 1) {
         list = list + `.`
       } else {

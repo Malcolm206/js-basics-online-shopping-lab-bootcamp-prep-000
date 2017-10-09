@@ -48,6 +48,18 @@ function viewCart() {
 
 function total() {
   // write your code here
+  if (cart.length === 0) {
+    return 0
+  } else {
+    var totalCost = 0
+    for (var i =0; i<cart.length; i++){
+      var x = cart[i]
+      var y = Object.keys(x)
+      var z = x[y[0]]
+      totalCost = totalCost + z
+    }
+  }
+  return totalCost
 }
 
 function removeFromCart(item) {

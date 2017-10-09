@@ -66,7 +66,7 @@ function removeFromCart(item) {
   // write your code here
   for (var i = 0; i<cart.length; i++) {
     var x = cart[i]
-    if (x.hasOwnProperty(item) === true) {
+    if (x.hasOwnProperty([item]) === true) {
       var removeItem = item
       delete cart.removeItem
       return cart

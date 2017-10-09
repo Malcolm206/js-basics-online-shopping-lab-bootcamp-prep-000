@@ -26,9 +26,8 @@ function viewCart() {
     for(var i =0; i<cart.length; i++) {
       var x = cart[i]
       var y = Object.keys(x)
-      var z = Object.values(x)
-      var a = parseFloat(z[0])
-      list = list + ` ${y[0]} at $${a}`
+      var z = x[y[0]]
+      list = list + ` ${y[0]} at $${z}`
       if (i === cart.length - 2) {
         list = list + ',and'
       } if(i === cart.length - 1) {

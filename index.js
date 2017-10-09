@@ -68,12 +68,11 @@ function removeFromCart(item) {
     var x = cart[i]
     if (x.hasOwnProperty([item]) === true) {
       delete cart.x
-      return cart
     } else if (i === cart.length - 1){
       console.log(`That item is not in your cart.`)
-      return cart
     }
   }
+  return cart
 }
 
 function placeOrder(cardNumber) {

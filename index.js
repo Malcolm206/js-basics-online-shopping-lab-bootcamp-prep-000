@@ -28,7 +28,13 @@ function viewCart() {
       var y = Object.keys(x)
       var z = x[y[0]]
       list = list + ` ${y[0]} at $${z}`
-      if (i === cart.length - 2) {
+      if (cart.length === 2){
+        if (i === 0) {
+          list = list + ' and'
+        } else {
+          list = list + `.`
+        }
+      } else if (i === cart.length - 2) {
         list = list + ', and'
       } else if(i === cart.length - 1) {
         list = list + `.`

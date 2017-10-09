@@ -64,14 +64,16 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  var a = cart
   for (var i = 0; i<cart.length; i++) {
     var x = cart[i]
     if (x.hasOwnProperty([item]) === true) {
       var pos = cart.indexOf(x)
       cart.splice(pos, 1)
-    } else if (i === cart.length - 1){
-      console.log(`That item is not in your cart.`)
-    }
+    } 
+  }
+  if (a === cart) {
+    console.log(`That item is not in your cart.`)
   }
   return cart
 }
